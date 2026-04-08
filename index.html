@@ -1,337 +1,595 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekoching - Excellent Coaching | IPMAT, CAT, CLAT, CUET</title>
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Ekoching – Excellent Coaching</title>
+  <link rel="stylesheet" href="style.css"/>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <!-- Font Awesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"/>
 </head>
 <body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <a href="#home">Ekoching</a>
+
+  <!-- ======== LOADER ======== -->
+  <div id="loader">
+    <div class="loader-inner">
+      <div class="loader-logo">E</div>
+      <p>Ekoching</p>
+    </div>
+  </div>
+
+  <!-- ======== SCROLL TO TOP ======== -->
+  <button id="scrollTop" aria-label="Scroll to top"><i class="fas fa-chevron-up"></i></button>
+
+  <!-- ======== NAVBAR ======== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-e">E</span>koching
+      </a>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#services" class="nav-link">Courses</a></li>
+        <li><a href="#why" class="nav-link">Why Us</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#testimonials" class="nav-link">Reviews</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+        <li><a href="#inquiry" class="nav-cta">Enroll Now</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ======== HERO SECTION ======== -->
+  <section id="home" class="hero">
+    <div class="hero-bg">
+      <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1600&auto=format&fit=crop" alt="Students studying" class="hero-img"/>
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content fade-in">
+      <span class="hero-badge">India's Premier Coaching Institute</span>
+      <h1 class="hero-title">Ekoching – <br/><em>Excellent Coaching</em></h1>
+      <p class="hero-tagline">We work for insuring your future</p>
+      <p class="hero-sub">Expert-led preparation for IPMAT · CAT · CLAT · CUET with personalised mentoring and proven results.</p>
+      <div class="hero-btns">
+        <a href="#inquiry" class="btn-primary">Enroll Now <i class="fas fa-arrow-right"></i></a>
+        <a href="#contact" class="btn-outline">Request a Call <i class="fas fa-phone"></i></a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><span class="stat-num">2000+</span><span class="stat-label">Students Enrolled</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">95%</span><span class="stat-label">Selection Rate</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><span class="stat-num">50+</span><span class="stat-label">Expert Faculty</span></div>
+      </div>
+    </div>
+    <div class="hero-scroll-hint">
+      <span>Scroll Down</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ======== ABOUT SECTION ======== -->
+  <section id="about" class="about section-pad">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap reveal">
+          <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=700&auto=format&fit=crop" alt="Classroom at Ekoching" class="about-img"/>
+          <div class="about-badge-float">
+            <i class="fas fa-award"></i>
+            <div><strong>Award Winning</strong><small>Institute 2024</small></div>
+          </div>
+        </div>
+        <div class="about-text reveal">
+          <span class="section-tag">About Ekoching</span>
+          <h2 class="section-title">Shaping Future Leaders <em>Since Day One</em></h2>
+          <p>Ekoching is Ahmedabad's most trusted EdTech coaching institute, specialising in IPMAT, CAT, CLAT, and CUET preparation. Founded on the belief that every student deserves world-class guidance, we combine rigorous academics with personalised mentoring to unlock each learner's full potential.</p>
+          <p>Our faculty comprises IIM alumni, legal experts, and national-rank holders who don't just teach—they inspire. With small batch sizes and data-driven progress tracking, we make sure no student is left behind.</p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <i class="fas fa-bullseye"></i>
+              <div>
+                <strong>Our Mission</strong>
+                <p>Make quality education accessible and empower students to secure seats in India's top institutions.</p>
+              </div>
             </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#services" class="nav-link">Courses</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#gallery" class="nav-link">Gallery</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#testimonials" class="nav-link">Reviews</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
+            <div class="pillar">
+              <i class="fas fa-eye"></i>
+              <div>
+                <strong>Our Vision</strong>
+                <p>To be the most student-centric coaching platform that drives holistic academic and personal growth.</p>
+              </div>
+            </div>
+          </div>
+          <a href="#inquiry" class="btn-primary">Start Your Journey <i class="fas fa-arrow-right"></i></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== SERVICES SECTION ======== -->
+  <section id="services" class="services section-pad bg-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Courses</span>
+        <h2 class="section-title">Expert Coaching for <em>Every Exam</em></h2>
+        <p class="section-sub">Choose your path and let our specialists guide you to success.</p>
+      </div>
+      <div class="services-grid">
+
+        <div class="service-card reveal">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=600&auto=format&fit=crop" alt="IPMAT Coaching"/>
+            <div class="service-tag">IPMAT</div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fas fa-graduation-cap"></i></div>
+            <h3>IPMAT Coaching</h3>
+            <p>Comprehensive preparation for IIM Indore & Rohtak's 5-year Integrated Programme in Management. Covers Quantitative Aptitude, Verbal Ability, and Logical Reasoning with mock test series.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> 200+ Hours of Live Classes</li>
+              <li><i class="fas fa-check"></i> 30+ Full-Length Mocks</li>
+              <li><i class="fas fa-check"></i> Personal Doubt Sessions</li>
             </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
+            <a href="#inquiry" class="service-btn">Enroll Now <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-    </nav>
 
-    <!-- Home Section -->
-    <section id="home" class="hero">
-        <div class="hero-content">
-            <h1 class="hero-title">Ekoching – Excellent Coaching</h1>
-            <p class="hero-subtitle">We work for insuring your future</p>
-            <div class="hero-buttons">
-                <a href="#booking" class="btn btn-primary">Enroll Now</a>
-                <a href="#contact" class="btn btn-secondary">Request a Call</a>
-            </div>
+        <div class="service-card reveal">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=600&auto=format&fit=crop" alt="CAT Coaching"/>
+            <div class="service-tag">CAT</div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fas fa-chart-line"></i></div>
+            <h3>CAT Coaching</h3>
+            <p>India's most competitive MBA entrance exam demands strategic preparation. Our IIM alumni faculty train you in VARC, DILR, and QA with proven shortcuts and time-management strategies.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> IIM Alumni Mentors</li>
+              <li><i class="fas fa-check"></i> AI-Powered Analytics</li>
+              <li><i class="fas fa-check"></i> GD-PI Preparation</li>
+            </ul>
+            <a href="#inquiry" class="service-btn">Enroll Now <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-        <div class="hero-overlay"></div>
-    </section>
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Ekoching</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>Ekoching is an education-focused startup dedicated to helping students excel in competitive exams like IPMAT, CAT, CLAT, and CUET. Founded by passionate educators, we believe every student deserves personalized guidance to achieve their dreams.</p>
-                    <div class="mission-vision">
-                        <div class="mission">
-                            <h3><i class="fas fa-bullseye"></i> Our Mission</h3>
-                            <p>To empower students with quality education and strategic preparation for top entrance exams.</p>
-                        </div>
-                        <div class="vision">
-                            <h3><i class="fas fa-eye"></i> Our Vision</h3>
-                            <p>To be the leading coaching institute shaping future leaders through excellence.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="about-image">
-                    <img src="https://images.unsplash.com/photo-1524178232363-933d45ac76e6?w=500&h=400&fit=crop" alt="Classroom">
-                </div>
-            </div>
+        <div class="service-card reveal">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1589829545856-d10d557cf95f?w=600&auto=format&fit=crop" alt="CLAT Coaching"/>
+            <div class="service-tag">CLAT</div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
+            <h3>CLAT Coaching</h3>
+            <p>Pathway to India's National Law Universities. Our legal experts provide in-depth training in Legal Reasoning, English, GK, Logical Reasoning, and Mathematics for consistent 99+ percentile scores.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> NLU Expert Faculty</li>
+              <li><i class="fas fa-check"></i> Daily Current Affairs</li>
+              <li><i class="fas fa-check"></i> Legal Reasoning Mastery</li>
+            </ul>
+            <a href="#inquiry" class="service-btn">Enroll Now <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-    </section>
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Our Courses</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>IPMAT Coaching</h3>
-                    <p>Comprehensive preparation for Integrated Program in Management Aptitude Test with expert faculty and mock tests.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-line"></i>
-                    </div>
-                    <h3>CAT Coaching</h3>
-                    <p>Strategic preparation for CAT exam covering Quantitative, Verbal, and Data Interpretation sections.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-balance-scale"></i>
-                    </div>
-                    <h3>CLAT Coaching</h3>
-                    <p>Complete guidance for Common Law Admission Test with focus on Legal Reasoning and GK.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-book-open"></i>
-                    </div>
-                    <h3>CUET Preparation</h3>
-                    <p>Targeted preparation for Common University Entrance Test across all domains.</p>
-                </div>
-            </div>
+        <div class="service-card reveal">
+          <div class="service-img-wrap">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=600&auto=format&fit=crop" alt="CUET Coaching"/>
+            <div class="service-tag">CUET</div>
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fas fa-university"></i></div>
+            <h3>CUET Preparation</h3>
+            <p>Central Universities Entrance Test preparation covering all domains — Language, Domain-Specific Subjects, and General Test. Get into DU, BHU, JNU, and 250+ central universities confidently.</p>
+            <ul class="service-features">
+              <li><i class="fas fa-check"></i> Subject-Wise Coverage</li>
+              <li><i class="fas fa-check"></i> NTA Pattern Mocks</li>
+              <li><i class="fas fa-check"></i> Score Guarantee Program</li>
+            </ul>
+            <a href="#inquiry" class="service-btn">Enroll Now <i class="fas fa-arrow-right"></i></a>
+          </div>
         </div>
-    </section>
 
-    <!-- Gallery Section -->
-    <section id="gallery" class="gallery">
-        <div class="container">
-            <h2 class="section-title">Gallery</h2>
-            <div class="gallery-grid">
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=400&h=300&fit=crop" alt="Classroom">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=400&h=300&fit=crop" alt="Students">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=400&h=300&fit=crop" alt="Teaching">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=400&h=300&fit=crop" alt="Study Group">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1519452635265-7b1fbfd1e891?w=400&h=300&fit=crop" alt="Library">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?w=400&h=300&fit=crop" alt="Campus">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop" alt="Lecture">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-                <div class="gallery-item">
-                    <img src="https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=400&h=300&fit=crop" alt="Students">
-                    <div class="gallery-overlay">
-                        <i class="fas fa-search-plus"></i>
-                    </div>
-                </div>
-            </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== WHY CHOOSE US ======== -->
+  <section id="why" class="why section-pad">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Why Ekoching</span>
+        <h2 class="section-title">The Ekoching <em>Advantage</em></h2>
+        <p class="section-sub">What sets us apart from every other coaching institute.</p>
+      </div>
+      <div class="why-grid">
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fas fa-users"></i></div>
+          <h3>Small Batch Sizes</h3>
+          <p>Maximum 20 students per batch ensures every student gets individual attention and timely doubt resolution from faculty.</p>
         </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials">
-        <div class="container">
-            <h2 class="section-title">What Our Students Say</h2>
-            <div class="testimonials-slider">
-                <div class="testimonial active">
-                    <div class="testimonial-content">
-                        <p>"Ekoching transformed my preparation for IPMAT. The personalized mentoring and regular tests helped me secure a top rank!"</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face" alt="Student">
-                            <div>
-                                <h4>Aarav Sharma</h4>
-                                <span>IPMAT Topper</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"The CAT coaching at Ekoching is unmatched. Their faculty explained complex concepts in simple terms. Got 99.2 percentile!"</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=60&h=60&fit=crop&crop=face" alt="Student">
-                            <div>
-                                <h4>Priya Patel</h4>
-                                <span>CAT 99.2%</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="testimonial">
-                    <div class="testimonial-content">
-                        <p>"CLAT preparation was made easy with Ekoching's structured approach. Their mock tests were exactly like the real exam."</p>
-                        <div class="testimonial-author">
-                            <img src="https://images.unsplash.com/photo-1494790108755-2616b612b786?w=60&h=60&fit=crop&crop=face" alt="Student">
-                            <div>
-                                <h4>Rohan Mehta</h4>
-                                <span>CLAT AIR 45</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="testimonial-nav">
-                <span class="nav-dot active" data-slide="0"></span>
-                <span class="nav-dot" data-slide="1"></span>
-                <span class="nav-dot" data-slide="2"></span>
-            </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fas fa-chalkboard-teacher"></i></div>
+          <h3>Expert Faculty</h3>
+          <p>Learn from IIM graduates, NLU alumni, and national toppers with 10+ years of teaching experience in their domain.</p>
         </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <div class="contact-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h3>Address</h3>
-                            <p>Ahmedabad, Gujarat, India</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h3>Phone</h3>
-                            <p>+91 98765 43210</p>
-                        </div>
-                    </div>
-                    <div class="contact-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h3>Email</h3>
-                            <p>info@ekoching.com</p>
-                        </div>
-                    </div>
-                </div>
-                <form class="contact-form">
-                    <div class="form-group">
-                        <input type="text" id="name" placeholder="Your Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" id="email" placeholder="Your Email" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="phone" placeholder="Your Phone" required>
-                    </div>
-                    <div class="form-group">
-                        <textarea id="message" placeholder="Your Message" rows="5" required></textarea>
-                    </div>
-                    <button type="submit" class="btn btn-primary">Send Message</button>
-                </form>
-            </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fas fa-file-alt"></i></div>
+          <h3>Rigorous Mock Tests</h3>
+          <p>100+ exam-pattern mock tests with detailed performance analytics to track progress and identify weak areas.</p>
         </div>
-    </section>
-
-    <!-- Booking Section -->
-    <section id="booking" class="booking">
-        <div class="container">
-            <h2 class="section-title">Request a Call</h2>
-            <form class="booking-form">
-                <div class="form-row">
-                    <div class="form-group">
-                        <input type="text" id="bname" placeholder="Full Name" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" id="bphone" placeholder="Phone Number" required>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <select id="course" required>
-                        <option value="">Select Course</option>
-                        <option value="ipmat">IPMAT Coaching</option>
-                        <option value="cat">CAT Coaching</option>
-                        <option value="clat">CLAT Coaching</option>
-                        <option value="cuet">CUET Preparation</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <input type="email" id="bemail" placeholder="Email (Optional)">
-                </div>
-                <button type="submit" class="btn btn-primary">Request Callback</button>
-            </form>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fas fa-user-tie"></i></div>
+          <h3>1-on-1 Mentorship</h3>
+          <p>Dedicated personal mentors for every student — from study plan creation to final exam counselling and result strategy.</p>
         </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Ekoching</h3>
-                    <p>Excellent Coaching for Excellent Future</p>
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-linkedin"></i></a>
-                        <a href="#"><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#services">Courses</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Ekoching. All rights reserved.</p>
-            </div>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fas fa-laptop"></i></div>
+          <h3>Hybrid Learning</h3>
+          <p>Attend classes online or offline — recorded lectures, live doubt sessions, and a student portal available 24/7.</p>
         </div>
-    </footer>
+        <div class="why-card reveal">
+          <div class="why-icon"><i class="fas fa-trophy"></i></div>
+          <h3>Proven Results</h3>
+          <p>95% of our students secure their dream institutes — IIMs, NLUs, DU, and more. Our track record speaks for itself.</p>
+        </div>
+      </div>
+    </div>
+  </section>
 
-    <script src="script.js"></script>
+  <!-- ======== GALLERY SECTION ======== -->
+  <section id="gallery" class="gallery section-pad bg-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Our Campus Life</span>
+        <h2 class="section-title">A Glimpse Inside <em>Ekoching</em></h2>
+        <p class="section-sub">Where learning meets inspiration every single day.</p>
+      </div>
+      <div class="gallery-grid">
+        <div class="gallery-item reveal" data-src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=1200&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1523050854058-8df90110c9f1?w=600&auto=format&fit=crop" alt="Campus"/>
+          <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Campus Life</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=1200&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1571260899304-425eee4c7efc?w=600&auto=format&fit=crop" alt="Classroom"/>
+          <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Smart Classrooms</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="https://images.unsplash.com/photo-1581726707445-75cbe4efc586?w=1200&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1581726707445-75cbe4efc586?w=600&auto=format&fit=crop" alt="Library"/>
+          <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Library</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=1200&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1606761568499-6d2451b23c66?w=600&auto=format&fit=crop" alt="Group study"/>
+          <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Group Study</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=1200&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=600&auto=format&fit=crop" alt="Mock test"/>
+          <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Mock Tests</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=1200&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&auto=format&fit=crop" alt="Results celebration"/>
+          <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Success Celebration</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=600&auto=format&fit=crop" alt="Mentoring session"/>
+          <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Mentoring Sessions</span></div>
+        </div>
+        <div class="gallery-item reveal" data-src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=1200&auto=format&fit=crop">
+          <img src="https://images.unsplash.com/photo-1529390079861-591de354faf5?w=600&auto=format&fit=crop" alt="Online class"/>
+          <div class="gallery-overlay"><i class="fas fa-expand"></i><span>Online Classes</span></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div id="lightbox">
+    <button id="lightboxClose"><i class="fas fa-times"></i></button>
+    <button id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+    <button id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+    <img id="lightboxImg" src="" alt="Gallery"/>
+    <div id="lightboxCounter"></div>
+  </div>
+
+  <!-- ======== TESTIMONIALS ======== -->
+  <section id="testimonials" class="testimonials section-pad">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Student Reviews</span>
+        <h2 class="section-title">What Our Students <em>Say</em></h2>
+        <p class="section-sub">Real stories of transformation and success from our learners.</p>
+      </div>
+      <div class="testimonials-slider">
+        <div class="testi-track" id="testiTrack">
+
+          <div class="testi-card">
+            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"Ekoching transformed my preparation completely. The faculty's dedication and personalised approach helped me crack IPMAT with a 98.7 percentile. I owe my IIM journey to this institute!"</p>
+            <div class="testi-footer">
+              <div class="testi-avatar">AK</div>
+              <div>
+                <strong>Aryan Kapoor</strong>
+                <small>IPMAT 2024 · IIM Indore</small>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"The CLAT batch at Ekoching is exceptional. Daily current affairs sessions, legal reasoning workshops, and weekly mocks made all the difference. I got into NLSIU Bangalore — my dream!"</p>
+            <div class="testi-footer">
+              <div class="testi-avatar">PS</div>
+              <div>
+                <strong>Priya Sharma</strong>
+                <small>CLAT 2024 · NLSIU Bangalore</small>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"CAT 99 percentile felt impossible until I joined Ekoching. The study material, the mock analysis sessions, and the personal mentor system are simply unmatched anywhere in Ahmedabad."</p>
+            <div class="testi-footer">
+              <div class="testi-avatar">RM</div>
+              <div>
+                <strong>Rohan Mehta</strong>
+                <small>CAT 2023 · IIM Calcutta</small>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+
+          <div class="testi-card">
+            <div class="testi-quote"><i class="fas fa-quote-left"></i></div>
+            <p>"I was confused after 12th about which entrance to target. Ekoching's counsellors guided me perfectly towards CUET. I scored 95% and got into Delhi University's economics programme. Life-changing!"</p>
+            <div class="testi-footer">
+              <div class="testi-avatar">NP</div>
+              <div>
+                <strong>Neha Patel</strong>
+                <small>CUET 2024 · Delhi University</small>
+              </div>
+              <div class="testi-stars">★★★★★</div>
+            </div>
+          </div>
+
+        </div>
+        <div class="testi-controls">
+          <button id="testiPrev"><i class="fas fa-chevron-left"></i></button>
+          <div class="testi-dots" id="testiDots"></div>
+          <button id="testiNext"><i class="fas fa-chevron-right"></i></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== INQUIRY / BOOKING SECTION ======== -->
+  <section id="inquiry" class="inquiry section-pad">
+    <div class="inquiry-bg">
+      <img src="https://images.unsplash.com/photo-1434030216411-0b793f4b4173?w=1600&auto=format&fit=crop" alt="bg"/>
+      <div class="inquiry-overlay"></div>
+    </div>
+    <div class="container">
+      <div class="inquiry-inner reveal">
+        <div class="inquiry-text">
+          <span class="section-tag light">Start Today</span>
+          <h2 class="section-title white">Ready to Begin Your <em>Success Story?</em></h2>
+          <p>Fill in the form and one of our academic counsellors will call you within 24 hours to discuss the best course for you — completely free of charge.</p>
+          <ul class="inquiry-perks">
+            <li><i class="fas fa-check-circle"></i> Free Counselling Session</li>
+            <li><i class="fas fa-check-circle"></i> Demo Class Access</li>
+            <li><i class="fas fa-check-circle"></i> Flexible Batch Timings</li>
+            <li><i class="fas fa-check-circle"></i> EMI Options Available</li>
+          </ul>
+        </div>
+        <div class="inquiry-form-wrap">
+          <h3>Request a Call Back</h3>
+          <form id="inquiryForm" novalidate>
+            <div class="form-group">
+              <label>Full Name *</label>
+              <input type="text" id="inqName" placeholder="Your full name" required/>
+              <span class="error-msg" id="inqNameErr"></span>
+            </div>
+            <div class="form-group">
+              <label>Phone Number *</label>
+              <input type="tel" id="inqPhone" placeholder="+91 XXXXX XXXXX" required/>
+              <span class="error-msg" id="inqPhoneErr"></span>
+            </div>
+            <div class="form-group">
+              <label>Email</label>
+              <input type="email" id="inqEmail" placeholder="your@email.com"/>
+            </div>
+            <div class="form-group">
+              <label>Course Interested In *</label>
+              <select id="inqCourse" required>
+                <option value="">Select a course</option>
+                <option value="IPMAT">IPMAT</option>
+                <option value="CAT">CAT</option>
+                <option value="CLAT">CLAT</option>
+                <option value="CUET">CUET</option>
+              </select>
+              <span class="error-msg" id="inqCourseErr"></span>
+            </div>
+            <div class="form-group">
+              <label>Preferred Batch</label>
+              <select id="inqBatch">
+                <option value="">Select timing</option>
+                <option value="morning">Morning (7 AM – 10 AM)</option>
+                <option value="afternoon">Afternoon (12 PM – 3 PM)</option>
+                <option value="evening">Evening (5 PM – 8 PM)</option>
+                <option value="online">Online (Anytime)</option>
+              </select>
+            </div>
+            <button type="submit" class="btn-primary full-width">
+              Request a Call <i class="fas fa-phone"></i>
+            </button>
+            <div id="inqSuccess" class="form-success" style="display:none;">
+              <i class="fas fa-check-circle"></i> Thank you! We'll call you shortly.
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== CONTACT SECTION ======== -->
+  <section id="contact" class="contact section-pad bg-light">
+    <div class="container">
+      <div class="section-header reveal">
+        <span class="section-tag">Get In Touch</span>
+        <h2 class="section-title">We're Here to <em>Help You</em></h2>
+        <p class="section-sub">Reach out to us with any questions or visit our centre in Ahmedabad.</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <h4>Our Address</h4>
+              <p>Ekoching Institute, CG Road, Navrangpura, Ahmedabad, Gujarat – 380009</p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-phone-alt"></i></div>
+            <div>
+              <h4>Phone</h4>
+              <p><a href="tel:+919876543210">+91 98765 43210</a></p>
+              <p><a href="tel:+919876543211">+91 98765 43211</a></p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <h4>Email</h4>
+              <p><a href="mailto:info@ekoching.com">info@ekoching.com</a></p>
+              <p><a href="mailto:admissions@ekoching.com">admissions@ekoching.com</a></p>
+            </div>
+          </div>
+          <div class="contact-card">
+            <div class="contact-icon"><i class="fas fa-clock"></i></div>
+            <div>
+              <h4>Office Hours</h4>
+              <p>Mon – Sat: 8:00 AM – 8:00 PM</p>
+              <p>Sunday: 10:00 AM – 4:00 PM</p>
+            </div>
+          </div>
+          <div class="contact-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            <a href="#" aria-label="Telegram"><i class="fab fa-telegram-plane"></i></a>
+          </div>
+        </div>
+
+        <div class="contact-form-wrap reveal">
+          <h3>Send Us a Message</h3>
+          <form id="contactForm" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Name *</label>
+                <input type="text" id="cName" placeholder="Full name" required/>
+                <span class="error-msg" id="cNameErr"></span>
+              </div>
+              <div class="form-group">
+                <label>Phone *</label>
+                <input type="tel" id="cPhone" placeholder="+91 XXXXX XXXXX" required/>
+                <span class="error-msg" id="cPhoneErr"></span>
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Email *</label>
+              <input type="email" id="cEmail" placeholder="your@email.com" required/>
+              <span class="error-msg" id="cEmailErr"></span>
+            </div>
+            <div class="form-group">
+              <label>Subject</label>
+              <input type="text" id="cSubject" placeholder="How can we help?"/>
+            </div>
+            <div class="form-group">
+              <label>Message *</label>
+              <textarea id="cMessage" rows="4" placeholder="Your message..." required></textarea>
+              <span class="error-msg" id="cMessageErr"></span>
+            </div>
+            <button type="submit" class="btn-primary full-width">
+              Send Message <i class="fas fa-paper-plane"></i>
+            </button>
+            <div id="contactSuccess" class="form-success" style="display:none;">
+              <i class="fas fa-check-circle"></i> Message sent! We'll respond within 24 hours.
+            </div>
+          </form>
+        </div>
+
+        <div class="contact-map reveal">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3671.9041!2d72.5566!3d23.0395!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x395e8489!2sNavrangpura%2C+Ahmedabad!5e0!3m2!1sen!2sin!4v1"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+            title="Ekoching Location Map">
+          </iframe>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======== FOOTER ======== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#home" class="nav-logo footer-logo">
+            <span class="logo-e">E</span>koching
+          </a>
+          <p>India's premier coaching institute for IPMAT, CAT, CLAT, and CUET. Transforming aspirations into achievements since day one.</p>
+          <div class="footer-social">
+            <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+            <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#services">Our Courses</a></li>
+            <li><a href="#why">Why Ekoching</a></li>
+            <li><a href="#gallery">Gallery</a></li>
+            <li><a href="#testimonials">Reviews</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Our Courses</h4>
+          <ul>
+            <li><a href="#inquiry">IPMAT Coaching</a></li>
+            <li><a href="#inquiry">CAT Coaching</a></li>
+            <li><a href="#inquiry">CLAT Coaching</a></li>
+            <li><a href="#inquiry">CUET Preparation</a></li>
+            <li><a href="#inquiry">Online Batches</a></li>
+            <li><a href="#inquiry">Test Series</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contact Info</h4>
+          <ul class="footer-contact">
+            <li><i class="fas fa-map-marker-alt"></i> CG Road, Navrangpura, Ahmedabad, Gujarat – 380009</li>
+            <li><i class="fas fa-phone"></i> <a href="tel:+919876543210">+91 98765 43210</a></li>
+            <li><i class="fas fa-envelope"></i> <a href="mailto:info@ekoching.com">info@ekoching.com</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Ekoching – Excellent Coaching. All rights reserved.</p>
+        <p>Designed with <i class="fas fa-heart"></i> in Ahmedabad, Gujarat</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
