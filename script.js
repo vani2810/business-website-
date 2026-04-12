@@ -1,74 +1,114 @@
-// Mobile Navigation Toggle
+// Enhanced Mobile Navigation
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('nav-menu');
 
 hamburger.addEventListener('click', () => {
     hamburger.classList.toggle('active');
     navMenu.classList.toggle('active');
+    document.body.classList.toggle('no-scroll');
 });
 
-// Close mobile menu when clicking on a link
-document.querySelectorAll('.nav-link').forEach(n => n.addEventListener('click', () => {
-    hamburger.classList.remove('active');
-    navMenu.classList.remove('active');
-}));
+// Close mobile menu
+document.querySelectorAll('.nav-link').forEach(link => {
+    link.addEventListener('click', () => {
+        hamburger.classList.remove('active');
+        navMenu.classList.remove('active');
+        document.body.classList.remove('no-scroll');
+    });
+});
 
-// Navbar background on scroll
+// Navbar scroll effects
 window.addEventListener('scroll', () => {
     const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
+    if (window.scrollY > 100) {
         navbar.style.background = 'rgba(255, 255, 255, 0.98)';
-        navbar.style.boxShadow = '0 4px 30px rgba(0,0,0,0.15)';
+        navbar.style.boxShadow = '0 12px 40px rgba(0,0,0,0.15)';
+        navbar.style.backdropFilter = 'blur(25px)';
     } else {
-        navbar.style.background = 'rgba(255, 255, 255, 0.95)';
-        navbar.style.boxShadow = '0 2px 20px rgba(0,0,0,0.1)';
+        navbar.style.background = 'rgba(255, 255, 255, 0.97)';
+        navbar.style.boxShadow = '0 8px 32px rgba(0,0,0,0.08)';
     }
 });
 
-// Form Validation and Submission
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const phone = document.getElementById('phone').value;
-    const message = document.getElementById('message').value;
+// Form handling with enhanced feedback
+function handleFormSubmit(formId, successMessage) {
+    const form = document.getElementById(formId);
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Simple validation
+        const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
+        let isValid = true;
+        
+        inputs.forEach(input => {
+            if (!input.value.trim()) {
+                input.style.borderColor = '#ef4444';
+                isValid = false;
+            } else {
+                input.style.borderColor = 'var(--primary)';
+            }
+        });
+        
+        if (isValid) {
+            // Success animation
+            form.innerHTML = `
+                <div style="text-align: center; padding: 2rem;">
+                    <i class="fas fa-check-circle" style="font-size: 4rem; color: var(--primary); margin-bottom: 1rem;"></i>
+                    <h3 style="color: var(--primary);">Thank You!</h3>
+                    <p>${successMessage}</p>
+                    <button onclick="location.reload()" class="btn btn-primary" style="margin-top: 1rem;">Send Another</button>
+                </div>
+            `;
+        }
+    });
+}
 
-    // Simple validation
-    if (name && email && phone && message) {
-        // Simulate form submission
-        alert('Thank you for your message! We will get back to you soon.');
-        this.reset();
-    } else {
-        alert('Please fill in all fields.');
-    }
-});
+handleFormSubmit('contactForm', 'Thank you for your message! We will get back to you within 24 hours.');
+handleFormSubmit('bookingForm', 'Callback requested! Our counselor will call you soon.');
 
-document.getElementById('bookingForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    const name = document.getElementById('bookingName').value;
-    const phone = document.getElementById('bookingPhone').value;
-    const course = document.getElementById('course').value;
-
-    if (name && phone && course) {
-        alert(`Thank you ${name}! We will call you back regarding ${course} soon.`);
-        this.reset();
-    } else {
-        alert('Please fill in all fields.');
-    }
-});
-
-// Smooth scrolling for anchor links
+// Smooth scrolling with offset for fixed navbar
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
+    anchor.addEventListener('click', function(e) {
         e.preventDefault();
         const target = document.querySelector(this.getAttribute('href'));
         if (target) {
-            target.scrollIntoView({
-                behavior: 'smooth',
-                block: 'start'
+            const offsetTop = target.offsetTop - 90;
+            window.scrollTo({
+                top: offsetTop,
+                behavior: 'smooth'
             });
         }
     });
+});
+
+// Intersection Observer for animations
+const observerOptions = {
+    threshold: 0.1,
+    rootMargin: '0px 0px -50px 0px'
+};
+
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+        }
+    });
+}, observerOptions);
+
+// Observe all sections
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(50px)';
+    section.style.transition = 'all 0.8s cubic-bezier(0.4, 0, 0.2, 1)';
+    observer.observe(section);
+});
+
+// Preloader (Optional)
+window.addEventListener('load', () => {
+    document.body.style.opacity = '0';
+    document.body.style.transition = 'opacity 0.5s ease';
+    setTimeout(() => {
+        document.body.style.opacity = '1';
+    }, 100);
+});
