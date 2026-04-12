@@ -3,16 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ekoching - Excellent Coaching | IPMAT, CAT, CLAT, CUET Preparation</title>
+    <meta name="description" content="Ekoching - Best coaching for IPMAT, CAT, CLAT, CUET in Ahmedabad. Expert faculty, small batches, guaranteed results.">
+    <meta name="keywords" content="IPMAT coaching, CAT coaching, CLAT coaching, CUET preparation, Ahmedabad coaching">
+    <title>Ekoching - #1 Coaching for IPMAT, CAT, CLAT, CUET | Ahmedabad</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <script>
-    // Auto-detect system preference
-    if (localStorage.theme === 'dark' || (!localStorage.theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-        document.documentElement.classList.add('dark');
-    }
-</script>
+    <!-- Favicon (Optional) -->
+    <link rel="icon" href="https://via.placeholder.com/32/0d9488/ffffff?text=E" type="image/x-icon">
 </head>
 <body>
     <!-- Navbar -->
@@ -340,5 +338,45 @@
     </footer>
 
     <script src="script.js"></script>
+    <div id="preloader" style="
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(135deg, #0d9488 0%, #06b6d4 50%, #14b8a6 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    transition: opacity 0.6s ease-out;
+">
+    <div style="
+        width: 80px;
+        height: 80px;
+        border: 5px solid rgba(255,255,255,0.3);
+        border-top: 5px solid rgba(255,255,255,0.9);
+        border-radius: 50%;
+        animation: spin 1.2s cubic-bezier(0.4, 0, 0.2, 1) infinite;">
+        </div>
+</div>
+
+<style>
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+</style>
+
+<script>
+window.addEventListener('load', function() {
+    const preloader = document.getElementById('preloader');
+    preloader.style.opacity = '0';
+    setTimeout(() => {
+        preloader.style.display = 'none';
+        document.body.style.opacity = '1';
+    }, 600);
+});
+</script>
 </body>
 </html>
